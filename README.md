@@ -39,6 +39,11 @@ kubectl apply -f simple-nginx.yaml
 kubectl delete -f simple-nginx.yaml
 ```
 
+#### Escalando as réplicas do meu pod
+```
+kubectl scale deployments/nginx --replicas=5
+```
+
 ### Criando um Deployment com réplicas!
 ```
 kubectl apply -f multiple-nginx.yaml
@@ -48,6 +53,24 @@ kubectl delete -f multiple-nginx.yaml
 ```
 kubectl apply -f network-nginx.yaml
 kubectl delete -f network-nginx.yaml
+```
+
+### Criando um Deployment com limits!
+```
+kubectl apply -f limits-nginx.yaml
+kubectl delete -f limits-nginx.yaml
+```
+
+### Criando um Deployment com volumes!
+```
+kubectl apply -f limits-nginx.yaml
+kubectl delete -f limits-nginx.yaml
+```
+
+### Criando um Deployment com volumes!
+```
+kubectl apply -f volume-nginx.yaml
+kubectl delete -f volume-nginx.yaml
 ```
 
 ## Links interessantes & adicionais
