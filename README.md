@@ -30,6 +30,8 @@ create - cria algum recurso "in line"
 Os objetivos desta etapa são:
 - criar um pod
 - criar um deployment
+- criar um namespace
+- separar aplicações por namespace
 - criar um service
 - identificar como os pods se comportam com atualização
 
