@@ -5,14 +5,26 @@ Para começarmos a brincar com o k8s, vamos fazer algumas etapas:
 2. Instalação de uma distribuição do kubernetes: minikube ou kind (o exemplo será utilizando o kind) - https://kubernetes.io/docs/tasks/tools/
 3. Let's play: executar o script que está em `scripts/launch-cluster.sh` e será criado um cluster usando o **kind**
 
+## Criando o nosso cluster.
+```
+cd scripts
+./launch-cluster.sh
+
+kubectl version --short
+```
+
 ## Principais comandos
+
+Os comandos no k8s tem o formato `kubectl METODO RECURSO FLAGS OPÇÕES`
 
 ### Os principais "métodos"
 ```
 get - retorna uma lista de elementos 
+diff - retorna o que será criado no cluster
 describe - retorna detalhes do elemento
 delete - deleta um elemento específico 
 apply - aplica um arquivo YAML ao cluster
+scale - escala um deployment
 create - cria algum recurso "in line"
 ```
 
@@ -37,6 +49,7 @@ Os objetivos desta etapa são:
 
 ### Criando um Pod!
 ```
+kubectl diff -f simple-nginx.yaml
 kubectl apply -f simple-nginx.yaml
 kubectl delete -f simple-nginx.yaml
 ```
