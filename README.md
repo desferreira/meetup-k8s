@@ -11,6 +11,7 @@ cd scripts
 ./launch-cluster.sh
 
 kubectl version --short
+kubectl get --raw='/readyz?verbose'
 ```
 
 ## Principais comandos
@@ -94,3 +95,6 @@ kubectl delete -f volume-nginx.yaml
 - https://rockcontent.com/br/blog/kubernetes/
 - [Tutorial Interativo](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
 - [Zero downtime deployment](https://medium.com/adeo-tech/how-to-build-a-zero-downtime-application-on-kubernetes-9f509fac3eb8)
+- [Cheatsheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+- [Kubernetes & Docker](https://kubernetes.io/blog/2020/12/02/dont-panic-kubernetes-and-docker/)
+- [List of containers runtime](https://landscape.cncf.io/card-mode?category=container-runtime&grouping=category)
